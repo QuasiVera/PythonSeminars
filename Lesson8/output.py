@@ -7,10 +7,11 @@ def OutputAll():
 
 
 def Search(data):
-     with open('file.txt', 'r', encoding='utf-8') as file:
+    data = data.lower()
+    with open('file.txt', 'r', encoding='utf-8') as file:
         flag = False
         for line in file:
-            if data in line:
+            if data in line.lower():
                 print(line)
                 flag = True
         if flag == False:
